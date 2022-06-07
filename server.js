@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 var XMLHttpRequest = require('xhr2');
+var cors = require('cors');
 
 const app = express()
 
@@ -26,6 +27,7 @@ const http = require('http')
 const port = process.env.PORT || 1338
 
 const server = http.createServer(app)
+app.use(cors())
 
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
@@ -34,6 +36,7 @@ app.use( bodyParser.json() );       // to support JSON-encoded bodies
 
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
+
 
 server.listen(port, (err) => {
   if (err) {
