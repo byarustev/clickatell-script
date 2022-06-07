@@ -1,0 +1,25 @@
+{
+  "name": "xhr2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "clickatell-platform": "^2.0.11",
+    "xhr2": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byarustev/clickatell-script.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byarustev/clickatell-script/issues"
+  },
+  "homepage": "https://github.com/byarustev/clickatell-script#readme"
+}
