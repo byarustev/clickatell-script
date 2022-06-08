@@ -77,32 +77,32 @@ server.listen(port, (err) => {
      * 
      */
     
-  app.post('/', function (req, res) {
-  console.log(req.body, 'base url')
-  console.log(req.body.event, 'event')
-  var xhr = new XMLHttpRequest()
-  const nnn = JSON.stringify(
-      {
-          "messages": [
-              {
-                  "channel": "whatsapp",
-                  "to": "256706440588",
-                  "content": "Test WhatsApp - we got ur initial contact via /"
-              }
-          ]
-      }
-  );
-  xhr.open('POST', 'https://platform.clickatell.com/v1/message', true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.setRequestHeader('Authorization', newApikey);
-  xhr.onreadystatechange = function(){
-      if (xhr.readyState == 4 && xhr.status == 200) {
-          console.log('success');
-      }
-  };
+//   app.post('/', function (req, res) {
+//   console.log(req.body, 'base url')
+//   console.log(req.body.event, 'event')
+//   var xhr = new XMLHttpRequest()
+//   const nnn = JSON.stringify(
+//       {
+//           "messages": [
+//               {
+//                   "channel": "whatsapp",
+//                   "to": "256706440588",
+//                   "content": "Test WhatsApp - we got ur initial contact via /"
+//               }
+//           ]
+//       }
+//   );
+//   xhr.open('POST', 'https://platform.clickatell.com/v1/message', true);
+//   xhr.setRequestHeader('Content-Type', 'application/json');
+//   xhr.setRequestHeader('Authorization', newApikey);
+//   xhr.onreadystatechange = function(){
+//       if (xhr.readyState == 4 && xhr.status == 200) {
+//           console.log('success');
+//       }
+//   };
 
-  xhr.send(nnn);
-})
+//   xhr.send(nnn);
+// })
 
   app.post('/client-callback/one-api-reply', function (req, res) {
     console.log(req.body, 'request')
